@@ -3,54 +3,34 @@
 namespace App\Http\Controllers\SupportTeam;
 
 use App\Helpers\Qs;
-use App\Http\Requests\Exam\ExamCreate;
-use App\Http\Requests\Exam\ExamUpdate;
-use App\Repositories\ExamRepo;
+use App\Http\Requests\Yudisium\YudisiumCreate;
+use App\Repositories\YudisiumRepo;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class YudisiumController extends Controller
 {
-    protected $exam;
-    public function __construct(ExamRepo $exam)
+    protected $yudusim;
+    public function __construct(YudisiumRepo $yudisium)
     {
         // $this->middleware('teamSA', ['except' => ['destroy',] ]);
         // $this->middleware('super_admin', ['only' => ['destroy',] ]);
 
-        $this->exam = $exam;
+        $this->yudisium = $yudisium;
     }
 
     public function index()
     {
-        $d['exams'] = $this->exam->all();
+        $d['yud'] = $this->yudisium->getYudisium(Auth::user()->id);
+
         return view('pages.support_team.yudisiums.index', $d);
     }
 
-    public function store(ExamCreate $req)
+    public function store(YudisiumCreate $req)
     {
-        $data = $req->only(['name', 'term']);
-        $data['year'] = Qs::getSetting('current_session');
-
-        $this->exam->create($data);
+        $data = $req->all();
+        $this->yudisium->create($data);
         return back()->with('flash_success', __('msg.store_ok'));
     }
 
-    public function edit($id)
-    {
-        $d['ex'] = $this->exam->find($id);
-        return view('pages.support_team.exams.edit', $d);
-    }
-
-    public function update(ExamUpdate $req, $id)
-    {
-        $data = $req->only(['name', 'term']);
-
-        $this->exam->update($id, $data);
-        return back()->with('flash_success', __('msg.update_ok'));
-    }
-
-    public function destroy($id)
-    {
-        $this->exam->delete($id);
-        return back()->with('flash_success', __('msg.del_ok'));
-    }
 }

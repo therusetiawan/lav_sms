@@ -51,9 +51,15 @@
                                     <td>Perpustakaan</td>
                                     <td>Lakukan unggah mandiri</td>
                                     <td>
+                                        @if(empty($yud))
                                         <label class="badge badge-danger">
                                             Belum Terpenuhi
                                         </label>
+                                        @else
+                                        <label class="badge badge-success">
+                                            Terpenuhi
+                                        </label>
+                                        @endif
                                     </td>
                                 </tr>
                             </tbody>
@@ -69,6 +75,8 @@
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Judul <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <input name="title" required type="text" class="form-control" placeholder="Judul">
+                                        <input name="student_id" type="hidden" value="{{ Auth::user()->id }}">
+                                        <input name="is_approved" type="hidden" value="false">
                                     </div>
                                 </div>
 
@@ -103,8 +111,8 @@
                                 <div class="form-group row">
                                     <label for="term" class="col-lg-3 col-form-label font-weight-semibold">Jenis Karya</label>
                                     <div class="col-lg-9">
-                                        <select data-placeholder="" class="form-control select-search" name="jenis_karya_akhir" id="term" disabled>
-                                            <option value="Tugas Akhir" selected>Tugas Akhir</option>
+                                        <select data-placeholder="" class="form-control select-search" name="jenis_karya" id="term" readonly>
+                                            <option value="Skripsi" selected>Skripsi</option>
                                         </select>
                                     </div>
                                 </div>
@@ -112,7 +120,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Tahun <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="tahun" value="2022" required type="text" class="form-control" disabled>
+                                        <input name="tahun" value="2022" required type="text" class="form-control" readonly>
                                     </div>
                                 </div>
 
