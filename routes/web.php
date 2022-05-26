@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('promote/{fc}/{fs}/{tc}/{ts}', 'PromotionController@promote')->name('students.promote');
             
             Route::resource('yudisiums', 'YudisiumController');
+            Route::resource('unggah_mandiri', 'UnggahMandiriController');
 
         });
 

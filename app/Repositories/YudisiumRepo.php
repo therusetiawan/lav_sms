@@ -14,7 +14,7 @@ class YudisiumRepo
 
     public function all()
     {
-        return Exam::orderBy('name', 'asc')->orderBy('year', 'desc')->get();
+        return Yudisium::orderBy('created_at', 'desc')->get();
     }
 
     public function getYudisium($data)
@@ -22,9 +22,14 @@ class YudisiumRepo
         return Yudisium::where('student_id', $data)->first();
     }
 
+    public function approve($id, $data)
+    {
+        return Yudisium::find($id)->update($data);
+    }
+
     public function find($id)
     {
-        return Exam::find($id);
+        return Yudisium::find($id);
     }
 
     public function create($data)
@@ -59,7 +64,7 @@ class YudisiumRepo
 
     public function delete($id)
     {
-        return Exam::destroy($id);
+        return Yudisium::destroy($id);
     }
 
     /*********** Grades ***************/

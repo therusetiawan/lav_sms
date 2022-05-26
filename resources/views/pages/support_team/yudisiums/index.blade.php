@@ -58,7 +58,7 @@
                                             Belum Terpenuhi
                                         </label>
                                         @else
-                                            @if($yud->is_approved == 'yes')
+                                            @if($yud->is_approved == 'true')
                                                 <label class="badge badge-success">
                                                     Terpenuhi
                                                 </label>
