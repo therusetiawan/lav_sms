@@ -56,9 +56,15 @@
                                             Belum Terpenuhi
                                         </label>
                                         @else
-                                        <label class="badge badge-success">
-                                            Terpenuhi
-                                        </label>
+                                            @if($yud->is_approved == 'yes')
+                                                <label class="badge badge-success">
+                                                    Terpenuhi
+                                                </label>
+                                            @else
+                                                <label class="badge badge-warning">
+                                                    Proses Verifikasi
+                                                </label>
+                                            @endif
                                         @endif
                                     </td>
                                 </tr>
