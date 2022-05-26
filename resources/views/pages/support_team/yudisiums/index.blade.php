@@ -11,7 +11,9 @@
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
                 <li class="nav-item"><a href="#all-exams" class="nav-link active" data-toggle="tab">Checlist Yudisium</a></li>
+                @if(empty($yud))
                 <li class="nav-item"><a href="#new-exam" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Upload Mandiri</a></li>
+                @endif
             </ul>
 
             <div class="tab-content">
@@ -72,6 +74,7 @@
                         </table>
                     </div>
 
+                @if(empty($yud))
                 <div class="tab-pane fade" id="new-exam">
                     <div class="row">
                         <div class="col-md-10" style="margin-top: -300px">
@@ -151,6 +154,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
         </div>
     </div>
