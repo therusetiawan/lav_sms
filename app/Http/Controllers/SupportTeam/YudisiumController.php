@@ -26,6 +26,11 @@ class YudisiumController extends Controller
         return view('pages.support_team.yudisiums.index', $d);
     }
 
+    public function create() 
+    {
+        return view('pages.support_team.yudisiums.create');
+    }
+
     public function store(YudisiumCreate $req)
     {
         $data = $req->all();

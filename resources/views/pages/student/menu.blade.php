@@ -4,5 +4,5 @@
 </li>
 
 <li class="nav-item">
-    <a href="{{ route('yudisiums.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['yudisiums.index']) ? 'active' : '' }}"><i class="icon-graduation"></i> Yudisium</a>
+    <a href="{{ route('yudisiums.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['yudisiums.index', 'yudisiums.create']) ? 'active' : '' }}"><i class="icon-graduation"></i> Yudisium</a>
 </li>
