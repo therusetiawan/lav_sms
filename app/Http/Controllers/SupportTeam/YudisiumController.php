@@ -35,7 +35,7 @@ class YudisiumController extends Controller
     {
         $data = $req->all();
         $this->yudisium->create($data);
-        return back()->with('flash_success', __('msg.store_ok'));
+        return redirect()->route('yudisiums.index')->with('flash_success', __('msg.store_ok'));
     }
 
 }

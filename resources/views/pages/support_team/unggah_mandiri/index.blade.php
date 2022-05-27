@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Unggah Mandiri')
+@section('page_title', 'Verifikasi ETD')
 @section('content')
 
     <div class="card">
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Unggah Mandiri</h6>
+            <h6 class="card-title">Verifikasi ETD</h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -48,9 +48,9 @@
                                                 </a>
 
                                                 <div class="dropdown-menu dropdown-menu-left">
-                                                    <a href="{{ route('unggah_mandiri.edit', $yud->id) }}" class="dropdown-item"><i class="icon-check"></i> Approve</a>
+                                                    <a href="{{ route('etd_verify.edit', $yud->id) }}" class="dropdown-item"><i class="icon-check"></i> Approve</a>
                                                     <a id="{{ $yud->id }}" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> Delete</a>
-                                                    <form method="post" id="item-delete-{{ $yud->id }}" action="{{ route('unggah_mandiri.destroy', $yud->id) }}" class="hidden">@csrf @method('delete')</form>
+                                                    <form method="post" id="item-delete-{{ $yud->id }}" action="{{ route('etd_verify.destroy', $yud->id) }}" class="hidden">@csrf @method('delete')</form>
                                                 </div>
                                             </div>
                                         </div>

@@ -75,49 +75,49 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Fulltext <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="fulltext" required type="file" class="form-control">
+                                        <input name="file" required type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Halaman Judul <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="halaman_judul" required type="file" class="form-control">
+                                        <input name="halaman_judul" type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Abstrak & Abstract <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="abstrak" required type="file" class="form-control">
+                                        <input name="abstrak" type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Daftar Isi<span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="abstrak" required type="file" class="form-control">
+                                        <input name="abstrak" type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Pendahuluan<span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="pendahuluan" required type="file" class="form-control">
+                                        <input name="pendahuluan" type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Penutup<span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="penutup" required type="file" class="form-control">
+                                        <input name="penutup" type="file" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label font-weight-semibold">Daftar Pustaka<span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
-                                        <input name="daftar_pustaka" required type="file" class="form-control">
+                                        <input name="daftar_pustaka" type="file" class="form-control">
                                     </div>
                                 </div>
 
